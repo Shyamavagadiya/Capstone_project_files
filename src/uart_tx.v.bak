@@ -1,0 +1,52 @@
+module uart_tx (
+    input clk,             // system clock
+    input rst,             // reset
+    input tx_start,        // start transmission
+    input [7:0] data_in,   // input data
+    output reg tx,         // UART serial output
+    output reg tx_done     // transmission complete
+);
+
+parameter CLK_FREQ = 50000000;   // 50 MHz
+parameter BAUD_RATE = 9600;      // baud rate
+localparam BAUD_CNT = CLK_FREQ / BAUD_RATE;
+
+reg [15:0] baud_cnt;
+reg [3:0] bit_index;
+reg [9:0] tx_shift;
+reg busy;
+
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        tx <= 1'b1;
+        tx_done <= 1'b0;
+        busy <= 0;
+        baud_cnt <= 0;
+        bit_index <= 0;
+    end else begin
+        if (tx_start && !busy) begin
+            // Start bit + 8 data bits + stop bit
+            tx_shift <= {1'b1, data_in, 1'b0};
+            busy <= 1;
+            bit_index <= 0;
+            baud_cnt <= 0;
+        end else if (busy) begin
+            if (baud_cnt < BAUD_CNT-1) begin
+                baud_cnt <= baud_cnt + 1;
+            end else begin
+                baud_cnt <= 0;
+                tx <= tx_shift[bit_index];
+                bit_index <= bit_index + 1;
+
+                if (bit_index == 9) begin
+                    busy <= 0;
+                    tx_done <= 1;
+                end
+            end
+        end else begin
+            tx_done <= 0;
+        end
+    end
+end
+
+endmodule

@@ -1,0 +1,76 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity uart_tb is
+end uart_tb;
+
+architecture behavior of uart_tb is
+    -- Component Declaration
+    component uart_tx
+        Port (
+            clk    : in  std_logic;
+            reset  : in  std_logic;
+            tx_start : in  std_logic;
+            data_in  : in  std_logic_vector(7 downto 0);
+            tx_out   : out std_logic;
+            busy     : out std_logic
+        );
+    end component;
+
+    -- Signals
+    signal clk      : std_logic := '0';
+    signal reset    : std_logic := '0';
+    signal tx_start : std_logic := '0';
+    signal data_in  : std_logic_vector(7 downto 0) := (others => '0');
+    signal tx_out   : std_logic;
+    signal busy     : std_logic;
+
+    constant clk_period : time := 20 ns;
+
+begin
+    -- Instantiate UART Transmitter
+    uut: uart_tx
+        port map (
+            clk => clk,
+            reset => reset,
+            tx_start => tx_start,
+            data_in => data_in,
+            tx_out => tx_out,
+            busy => busy
+        );
+
+    -- Clock process
+    clk_process : process
+    begin
+        clk <= '0';
+        wait for clk_period/2;
+        clk <= '1';
+        wait for clk_period/2;
+    end process;
+
+    -- Stimulus process
+    stim_proc: process
+    begin
+        -- Reset
+        reset <= '1';
+        wait for 40 ns;
+        reset <= '0';
+
+        -- Send first byte
+        data_in <= "01000001"; -- ASCII for 'A'
+        tx_start <= '1';
+        wait for clk_period;
+        tx_start <= '0';
+
+        wait for 2 ms;
+
+        -- Send second byte
+        data_in <= "01000010"; -- ASCII for 'B'
+        tx_start <= '1';
+        wait for clk_period;
+        tx_start <= '0';
+
+        wait;
+    end process;
+end behavior;

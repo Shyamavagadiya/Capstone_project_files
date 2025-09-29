@@ -1,0 +1,32 @@
+module baud_gen (
+    input wire clk,           // Main FPGA clock (e.g., 50 MHz)
+    input wire reset,         // Reset signal
+    output reg baud_tick      // Output tick for UART timing
+);
+
+    // Adjust parameters based on your clock frequency and baud rate
+    parameter CLOCK_FREQ = 50000000;   // 50 MHz FPGA clock
+    parameter BAUD_RATE  = 9600;       // Desired baud rate
+
+    // Calculate counter maximum value
+    localparam integer COUNT_MAX = CLOCK_FREQ / (BAUD_RATE * 16);  
+    // Using 16x oversampling for receiver reliability
+
+    integer count;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            count <= 0;
+            baud_tick <= 0;
+        end else begin
+            if (count == COUNT_MAX) begin
+                count <= 0;
+                baud_tick <= 1;
+            end else begin
+                count <= count + 1;
+                baud_tick <= 0;
+            end
+        end
+    end
+
+endmodule

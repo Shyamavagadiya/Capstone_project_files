@@ -1,0 +1,29 @@
+module uart_top (
+    input clk,
+    input rst,
+    input [7:0] data_in,
+    input start,
+    output tx,
+    output [7:0] data_out,
+    output tx_done,
+    output rx_done
+);
+
+uart_tx transmitter (
+    .clk(clk),
+    .rst(rst),
+    .tx_start(start),
+    .data_in(data_in),
+    .tx(tx),
+    .tx_done(tx_done)
+);
+
+uart_rx receiver (
+    .clk(clk),
+    .rst(rst),
+    .rx(tx),    // loopback connection
+    .data_out(data_out),
+    .rx_done(rx_done)
+);
+
+endmodule
