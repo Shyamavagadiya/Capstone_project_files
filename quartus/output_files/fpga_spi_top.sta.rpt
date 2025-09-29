@@ -1,0 +1,1381 @@
+TimeQuest Timing Analyzer report for fpga_spi_top
+Fri Sep 26 15:26:02 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'clk_50mhz'
+ 13. Slow Model Hold: 'clk_50mhz'
+ 14. Slow Model Recovery: 'clk_50mhz'
+ 15. Slow Model Removal: 'clk_50mhz'
+ 16. Slow Model Minimum Pulse Width: 'clk_50mhz'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clk_50mhz'
+ 27. Fast Model Hold: 'clk_50mhz'
+ 28. Fast Model Recovery: 'clk_50mhz'
+ 29. Fast Model Removal: 'clk_50mhz'
+ 30. Fast Model Minimum Pulse Width: 'clk_50mhz'
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Multicorner Timing Analysis Summary
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Setup Transfers
+ 41. Hold Transfers
+ 42. Recovery Transfers
+ 43. Removal Transfers
+ 44. Report TCCS
+ 45. Report RSKM
+ 46. Unconstrained Paths
+ 47. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; fpga_spi_top                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; timing.sdc    ; OK     ; Fri Sep 26 15:26:02 2025 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; clk_50mhz  ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50mhz } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 67.39 MHz ; 67.39 MHz       ; clk_50mhz  ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 5.161 ; 0.000         ;
++-----------+-------+---------------+
+
+
++-----------------------------------+
+; Slow Model Hold Summary           ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 0.499 ; 0.000         ;
++-----------+-------+---------------+
+
+
++-----------------------------------+
+; Slow Model Recovery Summary       ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 8.126 ; 0.000         ;
++-----------+-------+---------------+
+
+
++-----------------------------------+
+; Slow Model Removal Summary        ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 5.905 ; 0.000         ;
++-----------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-----------+-------+--------------------+
+; Clock     ; Slack ; End Point TNS      ;
++-----------+-------+--------------------+
+; clk_50mhz ; 8.758 ; 0.000              ;
++-----------+-------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_50mhz'                                                                                                                                          ;
++--------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 5.161  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 12.596     ;
+; 5.161  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 12.596     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.083  ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.738      ; 11.695     ;
+; 6.293  ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 11.468     ;
+; 6.293  ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 11.468     ;
+; 6.293  ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 11.468     ;
+; 6.293  ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 11.468     ;
+; 6.503  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 11.259     ;
+; 6.503  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 11.259     ;
+; 6.518  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 11.244     ;
+; 6.518  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 11.244     ;
+; 6.713  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 11.048     ;
+; 6.714  ; reset_n                                    ; uart_controller:uart_inst|rx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 11.047     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.162  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 10.602     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[6]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[4]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[5]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[7]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[2]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[3]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[1]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.219  ; reset_n                                    ; spi_master:spi_inst|tx_buffer[0]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 10.552     ;
+; 7.289  ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 10.477     ;
+; 7.289  ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 10.477     ;
+; 7.289  ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 10.477     ;
+; 7.289  ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 10.477     ;
+; 7.469  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 10.310     ;
+; 7.481  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 10.298     ;
+; 7.481  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 10.298     ;
+; 7.481  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 10.298     ;
+; 7.521  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 10.251     ;
+; 7.522  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 10.250     ;
+; 7.876  ; reset_n                                    ; uart_controller:uart_inst|tx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.886      ;
+; 7.948  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.831      ;
+; 7.948  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.831      ;
+; 8.503  ; uart_controller:uart_inst|tx_reg           ; uart_tx                                    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -2.720     ; 3.777      ;
+; 8.513  ; spi_master:spi_inst|sclk                   ; spi_sclk                                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -2.720     ; 3.767      ;
+; 8.514  ; spi_master:spi_inst|mosi                   ; spi_mosi                                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -2.719     ; 3.767      ;
+; 8.514  ; spi_master:spi_inst|ss                     ; spi_ss                                     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -2.719     ; 3.767      ;
+; 8.640  ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.123      ;
+; 8.847  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 8.910      ;
+; 8.848  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 8.909      ;
+; 8.855  ; uart_rx                                    ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 8.908      ;
+; 8.886  ; uart_rx                                    ; uart_controller:uart_inst|rx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 8.877      ;
+; 9.608  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 8.154      ;
+; 9.609  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 8.153      ;
+; 9.611  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 8.151      ;
+; 9.612  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 8.150      ;
+; 9.636  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 8.125      ;
+; 9.638  ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.721      ; 8.123      ;
+; 12.523 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 7.495      ;
+; 12.523 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 7.495      ;
+; 12.559 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.006     ; 7.475      ;
+; 12.559 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.006     ; 7.475      ;
+; 12.642 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 7.376      ;
+; 12.642 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 7.376      ;
+; 12.711 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.016      ; 7.345      ;
+; 12.723 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.016      ; 7.333      ;
+; 12.723 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.016      ; 7.333      ;
+; 12.723 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.016      ; 7.333      ;
+; 12.763 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.009      ; 7.286      ;
+; 12.764 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.009      ; 7.285      ;
+; 12.820 ; spi_master:spi_inst|clk_div_counter[6]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.013     ; 7.064      ;
+; 12.866 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.174      ;
+; 12.878 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.162      ;
+; 12.878 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.162      ;
+; 12.878 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.162      ;
+; 12.918 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.007     ; 7.115      ;
+; 12.919 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.007     ; 7.114      ;
+; 12.945 ; uart_controller:uart_inst|tx_shift[0]      ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.002     ; 6.950      ;
+; 12.985 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.055      ;
+; 12.997 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.043      ;
+; 12.997 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.043      ;
+; 12.997 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 7.043      ;
+; 13.037 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.007     ; 6.996      ;
+; 13.038 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.007     ; 6.995      ;
+; 13.070 ; spi_master:spi_inst|tx_buffer[0]           ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.012     ; 6.815      ;
+; 13.079 ; spi_master:spi_inst|bit_count[0]           ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.012     ; 6.806      ;
+; 13.122 ; spi_master:spi_inst|clk_div_counter[4]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.013     ; 6.762      ;
+; 13.137 ; uart_controller:uart_inst|tx_bit_count[1]  ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.006     ; 6.754      ;
+; 13.174 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 6.844      ;
+; 13.174 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 6.844      ;
+; 13.177 ; uart_controller:uart_inst|rx_baud_count[6] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.015     ; 6.848      ;
+; 13.177 ; uart_controller:uart_inst|rx_baud_count[6] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.015     ; 6.848      ;
+; 13.190 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.016      ; 6.866      ;
+; 13.190 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.016      ; 6.866      ;
++--------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_50mhz'                                                                                                                                          ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_baud_count[3] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_baud_count[6] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_state.0011    ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_bit_count[1]  ; uart_controller:uart_inst|rx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_bit_count[2]  ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_bit_count[3]  ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_ready         ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_bit_count[0]  ; uart_controller:uart_inst|tx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_bit_count[1]  ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_bit_count[2]  ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_state.0011    ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_state.0001    ; uart_controller:uart_inst|tx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_state.0000    ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[0]      ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[1]      ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[2]      ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[3]      ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[4]      ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[5]      ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[6]      ; uart_controller:uart_inst|rx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|rx_shift[7]      ; uart_controller:uart_inst|rx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|sclk~_Duplicate_1      ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|bit_count[0]           ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|bit_count[1]           ; spi_master:spi_inst|bit_count[1]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|bit_count[2]           ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|bit_count[3]           ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|state.TRANSMIT         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|mosi~_Duplicate_1      ; spi_master:spi_inst|mosi~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; spi_master:spi_inst|ss~_Duplicate_1        ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; uart_controller:uart_inst|tx_shift[0]      ; uart_controller:uart_inst|tx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.805      ;
+; 0.730 ; spi_master:spi_inst|state.DONE             ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.036      ;
+; 0.740 ; uart_controller:uart_inst|rx_shift[5]      ; uart_controller:uart_inst|rx_data[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.046      ;
+; 0.757 ; uart_controller:uart_inst|rx_data[0]       ; uart_controller:uart_inst|tx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.063      ;
+; 0.782 ; uart_controller:uart_inst|rx_state.0010    ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.088      ;
+; 0.784 ; uart_controller:uart_inst|rx_state.0010    ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.090      ;
+; 0.785 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.091      ;
+; 0.786 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.092      ;
+; 0.797 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.103      ;
+; 0.798 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.104      ;
+; 0.806 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.112      ;
+; 0.809 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.115      ;
+; 0.811 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.117      ;
+; 0.811 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.117      ;
+; 0.812 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.118      ;
+; 0.893 ; uart_controller:uart_inst|rx_shift[4]      ; uart_controller:uart_inst|rx_data[4]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.199      ;
+; 0.894 ; uart_controller:uart_inst|rx_shift[0]      ; uart_controller:uart_inst|rx_data[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.200      ;
+; 0.913 ; uart_controller:uart_inst|rx_baud_count[1] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.219      ;
+; 0.949 ; uart_controller:uart_inst|tx_state.0011    ; uart_controller:uart_inst|tx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.255      ;
+; 1.061 ; uart_controller:uart_inst|rx_data[7]       ; uart_controller:uart_inst|tx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 1.368      ;
+; 1.066 ; uart_controller:uart_inst|rx_shift[6]      ; uart_controller:uart_inst|rx_data[6]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 1.373      ;
+; 1.129 ; uart_controller:uart_inst|tx_bit_count[0]  ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.435      ;
+; 1.132 ; uart_controller:uart_inst|tx_baud_count[1] ; uart_controller:uart_inst|tx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.438      ;
+; 1.133 ; uart_controller:uart_inst|tx_bit_count[0]  ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.439      ;
+; 1.138 ; uart_controller:uart_inst|rx_state.0001    ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.444      ;
+; 1.148 ; spi_master:spi_inst|sclk~_Duplicate_1      ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.454      ;
+; 1.152 ; uart_controller:uart_inst|tx_baud_count[7] ; uart_controller:uart_inst|tx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.458      ;
+; 1.154 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.460      ;
+; 1.168 ; uart_controller:uart_inst|tx_baud_count[0] ; uart_controller:uart_inst|tx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.474      ;
+; 1.172 ; spi_master:spi_inst|clk_div_counter[5]     ; spi_master:spi_inst|clk_div_counter[5]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.478      ;
+; 1.183 ; spi_master:spi_inst|clk_div_counter[3]     ; spi_master:spi_inst|clk_div_counter[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.489      ;
+; 1.183 ; spi_master:spi_inst|clk_div_counter[0]     ; spi_master:spi_inst|clk_div_counter[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.489      ;
+; 1.185 ; uart_controller:uart_inst|rx_state.0011    ; uart_controller:uart_inst|rx_valid         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.491      ;
+; 1.186 ; uart_controller:uart_inst|tx_ready         ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.492      ;
+; 1.187 ; uart_controller:uart_inst|tx_baud_count[2] ; uart_controller:uart_inst|tx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.493      ;
+; 1.188 ; uart_controller:uart_inst|tx_baud_count[4] ; uart_controller:uart_inst|tx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.494      ;
+; 1.202 ; uart_controller:uart_inst|tx_baud_count[3] ; uart_controller:uart_inst|tx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.508      ;
+; 1.203 ; uart_controller:uart_inst|tx_baud_count[5] ; uart_controller:uart_inst|tx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.509      ;
+; 1.205 ; uart_controller:uart_inst|rx_baud_count[8] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.511      ;
+; 1.208 ; uart_controller:uart_inst|rx_baud_count[5] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.514      ;
+; 1.212 ; uart_controller:uart_inst|tx_baud_count[8] ; uart_controller:uart_inst|tx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.518      ;
+; 1.231 ; spi_master:spi_inst|clk_div_counter[1]     ; spi_master:spi_inst|clk_div_counter[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.537      ;
+; 1.231 ; spi_master:spi_inst|clk_div_counter[2]     ; spi_master:spi_inst|clk_div_counter[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.537      ;
+; 1.234 ; spi_master:spi_inst|clk_div_counter[4]     ; spi_master:spi_inst|clk_div_counter[4]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.540      ;
+; 1.235 ; spi_master:spi_inst|clk_div_counter[6]     ; spi_master:spi_inst|clk_div_counter[6]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.541      ;
+; 1.239 ; uart_controller:uart_inst|tx_baud_count[6] ; uart_controller:uart_inst|tx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.545      ;
+; 1.240 ; spi_master:spi_inst|clk_div_counter[8]     ; spi_master:spi_inst|clk_div_counter[8]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.546      ;
+; 1.263 ; uart_controller:uart_inst|rx_bit_count[2]  ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.569      ;
+; 1.272 ; uart_controller:uart_inst|rx_state.0000    ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.578      ;
+; 1.276 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.582      ;
+; 1.334 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.640      ;
+; 1.359 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.665      ;
+; 1.378 ; uart_controller:uart_inst|rx_state.0010    ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.684      ;
+; 1.382 ; uart_controller:uart_inst|rx_state.0001    ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.688      ;
+; 1.405 ; spi_master:spi_inst|bit_count[1]           ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.711      ;
+; 1.453 ; uart_controller:uart_inst|rx_data[7]       ; spi_master:spi_inst|tx_buffer[7]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.008      ; 1.767      ;
+; 1.473 ; uart_controller:uart_inst|tx_state.0000    ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.779      ;
+; 1.505 ; uart_controller:uart_inst|tx_bit_count[1]  ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.811      ;
+; 1.515 ; spi_master:spi_inst|clk_div_counter[7]     ; spi_master:spi_inst|clk_div_counter[7]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.821      ;
+; 1.522 ; uart_controller:uart_inst|rx_bit_count[1]  ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.828      ;
+; 1.527 ; uart_controller:uart_inst|rx_shift[7]      ; uart_controller:uart_inst|rx_data[7]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.002      ; 1.835      ;
+; 1.543 ; uart_controller:uart_inst|rx_shift[1]      ; uart_controller:uart_inst|rx_data[1]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.002      ; 1.851      ;
+; 1.557 ; uart_controller:uart_inst|rx_state.0000    ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 1.863      ;
+; 1.570 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 1.877      ;
+; 1.576 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 1.883      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk_50mhz'                                                                                                     ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 8.126 ; reset_n   ; uart_controller:uart_inst|rx_data[1]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.724      ; 9.638      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|rx_data[0]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|rx_data[2]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|rx_data[3]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|rx_data[4]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|rx_data[5]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.133 ; reset_n   ; uart_controller:uart_inst|rx_data[6]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.722      ; 9.629      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_valid         ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.135 ; reset_n   ; uart_controller:uart_inst|rx_data[7]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.723      ; 9.628      ;
+; 8.138 ; reset_n   ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 9.628      ;
+; 8.138 ; reset_n   ; uart_controller:uart_inst|tx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 9.628      ;
+; 8.138 ; reset_n   ; uart_controller:uart_inst|tx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.726      ; 9.628      ;
+; 8.276 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.503      ;
+; 8.276 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.503      ;
+; 8.276 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.503      ;
+; 8.276 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.503      ;
+; 8.276 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.503      ;
+; 8.276 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.739      ; 9.503      ;
+; 8.501 ; reset_n   ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.720      ; 9.116      ;
+; 8.501 ; reset_n   ; spi_master:spi_inst|sclk                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.720      ; 9.116      ;
+; 8.514 ; reset_n   ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.719      ; 9.102      ;
+; 8.538 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[1]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[2]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[3]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[4]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[5]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[6]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[7]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[8]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.538 ; reset_n   ; spi_master:spi_inst|clk_div_counter[0]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.732      ; 9.234      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|state.TRANSMIT         ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|mosi~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.564 ; reset_n   ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.717      ; 9.193      ;
+; 8.590 ; reset_n   ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 9.181      ;
+; 8.590 ; reset_n   ; spi_master:spi_inst|bit_count[1]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 9.181      ;
+; 8.590 ; reset_n   ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.731      ; 9.181      ;
+; 8.868 ; reset_n   ; spi_master:spi_inst|ss                     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 2.719      ; 8.748      ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk_50mhz'                                                                                                      ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 5.905 ; reset_n   ; spi_master:spi_inst|ss                     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.719      ; 8.748      ;
+; 6.144 ; reset_n   ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.731      ; 9.181      ;
+; 6.144 ; reset_n   ; spi_master:spi_inst|bit_count[1]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.731      ; 9.181      ;
+; 6.144 ; reset_n   ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.731      ; 9.181      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|state.TRANSMIT         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|mosi~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.170 ; reset_n   ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.717      ; 9.193      ;
+; 6.196 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[4]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[5]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[6]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[7]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[8]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.196 ; reset_n   ; spi_master:spi_inst|clk_div_counter[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.732      ; 9.234      ;
+; 6.259 ; reset_n   ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.719      ; 9.102      ;
+; 6.272 ; reset_n   ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.720      ; 9.116      ;
+; 6.272 ; reset_n   ; spi_master:spi_inst|sclk                   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.720      ; 9.116      ;
+; 6.458 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.739      ; 9.503      ;
+; 6.458 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.739      ; 9.503      ;
+; 6.458 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.739      ; 9.503      ;
+; 6.458 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.739      ; 9.503      ;
+; 6.458 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.739      ; 9.503      ;
+; 6.458 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.739      ; 9.503      ;
+; 6.596 ; reset_n   ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.726      ; 9.628      ;
+; 6.596 ; reset_n   ; uart_controller:uart_inst|tx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.726      ; 9.628      ;
+; 6.596 ; reset_n   ; uart_controller:uart_inst|tx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.726      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_valid         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.599 ; reset_n   ; uart_controller:uart_inst|rx_data[7]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.723      ; 9.628      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|rx_data[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|rx_data[2]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|rx_data[3]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|rx_data[4]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|rx_data[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.601 ; reset_n   ; uart_controller:uart_inst|rx_data[6]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.722      ; 9.629      ;
+; 6.608 ; reset_n   ; uart_controller:uart_inst|rx_data[1]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 2.724      ; 9.638      ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50mhz'                                                                                    ;
++-------+--------------+----------------+------------------+-----------+------------+--------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                                     ;
++-------+--------------+----------------+------------------+-----------+------------+--------------------------------------------+
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[0]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[0]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[1]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[1]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[2]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[2]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[3]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[3]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[0]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[0]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[1]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[1]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[2]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[2]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[3]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[3]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[4]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[4]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[5]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[5]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[6]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[6]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[7]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[7]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[8]     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[8]     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi~_Duplicate_1      ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi~_Duplicate_1      ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk~_Duplicate_1      ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk~_Duplicate_1      ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss                     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss                     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss~_Duplicate_1        ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss~_Duplicate_1        ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.DONE             ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.DONE             ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.IDLE             ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.IDLE             ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.TRANSMIT         ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.TRANSMIT         ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[0]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[0]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[1]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[1]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[2]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[2]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[3]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[3]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[4]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[4]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[5]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[5]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[6]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[6]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[7]           ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[7]           ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[0] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[0] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[1] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[1] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[2] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[2] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[3] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[3] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[4] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[4] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[5] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[5] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[6] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[6] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[7] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[7] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[8] ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[8] ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[0]  ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[0]  ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[1]  ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[1]  ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[2]  ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[2]  ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[3]  ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[3]  ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[0]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[0]       ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[1]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[1]       ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[2]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[2]       ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[3]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[3]       ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[4]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[4]       ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[5]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[5]       ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[6]       ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[6]       ;
++-------+--------------+----------------+------------------+-----------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset_n   ; clk_50mhz  ; 9.839 ; 9.839 ; Rise       ; clk_50mhz       ;
+; uart_rx   ; clk_50mhz  ; 7.531 ; 7.531 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50mhz  ; -6.858 ; -6.858 ; Rise       ; clk_50mhz       ;
+; uart_rx   ; clk_50mhz  ; -5.096 ; -5.096 ; Rise       ; clk_50mhz       ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; spi_mosi  ; clk_50mhz  ; 6.486 ; 6.486 ; Rise       ; clk_50mhz       ;
+; spi_sclk  ; clk_50mhz  ; 6.487 ; 6.487 ; Rise       ; clk_50mhz       ;
+; spi_ss    ; clk_50mhz  ; 6.486 ; 6.486 ; Rise       ; clk_50mhz       ;
+; uart_tx   ; clk_50mhz  ; 6.497 ; 6.497 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; spi_mosi  ; clk_50mhz  ; 6.486 ; 6.486 ; Rise       ; clk_50mhz       ;
+; spi_sclk  ; clk_50mhz  ; 6.487 ; 6.487 ; Rise       ; clk_50mhz       ;
+; spi_ss    ; clk_50mhz  ; 6.486 ; 6.486 ; Rise       ; clk_50mhz       ;
+; uart_tx   ; clk_50mhz  ; 6.497 ; 6.497 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------+
+; Fast Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_50mhz ; 11.235 ; 0.000         ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast Model Hold Summary           ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 0.215 ; 0.000         ;
++-----------+-------+---------------+
+
+
++------------------------------------+
+; Fast Model Recovery Summary        ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_50mhz ; 11.953 ; 0.000         ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast Model Removal Summary        ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 2.756 ; 0.000         ;
++-----------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-----------+-------+--------------------+
+; Clock     ; Slack ; End Point TNS      ;
++-----------+-------+--------------------+
+; clk_50mhz ; 9.000 ; 0.000              ;
++-----------+-------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_50mhz'                                                                                                                                          ;
++--------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 11.235 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 5.203      ;
+; 11.235 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 5.203      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.389 ; reset_n                                    ; uart_controller:uart_inst|tx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.424      ; 5.067      ;
+; 11.394 ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 5.045      ;
+; 11.394 ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 5.045      ;
+; 11.394 ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 5.045      ;
+; 11.394 ; reset_n                                    ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 5.045      ;
+; 11.591 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.849      ;
+; 11.592 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.848      ;
+; 11.598 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.842      ;
+; 11.599 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.841      ;
+; 11.689 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 4.750      ;
+; 11.689 ; reset_n                                    ; uart_controller:uart_inst|rx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 4.750      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.700 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.743      ;
+; 11.738 ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.706      ;
+; 11.738 ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.706      ;
+; 11.738 ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.706      ;
+; 11.738 ; reset_n                                    ; uart_controller:uart_inst|tx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.706      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[6]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[4]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[5]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[7]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[2]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[3]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[1]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.745 ; reset_n                                    ; spi_master:spi_inst|tx_buffer[0]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.707      ;
+; 11.828 ; uart_controller:uart_inst|tx_reg           ; uart_tx                                    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -1.377     ; 1.795      ;
+; 11.838 ; spi_master:spi_inst|sclk                   ; spi_sclk                                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -1.377     ; 1.785      ;
+; 11.839 ; spi_master:spi_inst|mosi                   ; spi_mosi                                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -1.376     ; 1.785      ;
+; 11.839 ; spi_master:spi_inst|ss                     ; spi_ss                                     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -1.376     ; 1.785      ;
+; 11.849 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.611      ;
+; 11.849 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.611      ;
+; 11.849 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.611      ;
+; 11.955 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.505      ;
+; 11.982 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.471      ;
+; 11.982 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.471      ;
+; 12.061 ; reset_n                                    ; uart_controller:uart_inst|tx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.379      ;
+; 12.082 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.378      ;
+; 12.083 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.377      ;
+; 12.311 ; uart_rx                                    ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.130      ;
+; 12.345 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.093      ;
+; 12.346 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.092      ;
+; 12.352 ; uart_rx                                    ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.089      ;
+; 12.375 ; uart_rx                                    ; uart_controller:uart_inst|rx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.066      ;
+; 12.580 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 3.860      ;
+; 12.582 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 3.858      ;
+; 12.584 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 3.856      ;
+; 12.585 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 3.855      ;
+; 12.599 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 3.840      ;
+; 12.601 ; uart_rx                                    ; uart_controller:uart_inst|rx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.407      ; 3.838      ;
+; 17.597 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.019      ; 2.454      ;
+; 17.597 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.019      ; 2.454      ;
+; 17.597 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.019      ; 2.454      ;
+; 17.624 ; spi_master:spi_inst|clk_div_counter[6]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.045     ; 2.293      ;
+; 17.659 ; uart_controller:uart_inst|tx_shift[0]      ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.031     ; 2.272      ;
+; 17.686 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.003     ; 2.343      ;
+; 17.686 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.003     ; 2.343      ;
+; 17.687 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.345      ;
+; 17.687 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.345      ;
+; 17.687 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.345      ;
+; 17.697 ; uart_controller:uart_inst|tx_bit_count[1]  ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.035     ; 2.230      ;
+; 17.703 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.019      ; 2.348      ;
+; 17.703 ; spi_master:spi_inst|clk_div_counter[4]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.045     ; 2.214      ;
+; 17.713 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.319      ;
+; 17.713 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.319      ;
+; 17.713 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.319      ;
+; 17.728 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 2.282      ;
+; 17.728 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 2.282      ;
+; 17.730 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.012      ; 2.314      ;
+; 17.730 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.012      ; 2.314      ;
+; 17.741 ; spi_master:spi_inst|clk_div_counter[5]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.045     ; 2.176      ;
+; 17.746 ; spi_master:spi_inst|clk_div_counter[1]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.045     ; 2.171      ;
+; 17.754 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 2.256      ;
+; 17.754 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.022     ; 2.256      ;
+; 17.756 ; spi_master:spi_inst|bit_count[0]           ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.044     ; 2.162      ;
+; 17.757 ; spi_master:spi_inst|clk_div_counter[0]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.045     ; 2.160      ;
+; 17.772 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.260      ;
+; 17.772 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.260      ;
+; 17.772 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.260      ;
+; 17.772 ; spi_master:spi_inst|tx_buffer[0]           ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.044     ; 2.146      ;
+; 17.793 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.239      ;
+; 17.819 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 0.000      ; 2.213      ;
+; 17.820 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.007     ; 2.205      ;
+; 17.820 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.007     ; 2.205      ;
+; 17.821 ; uart_controller:uart_inst|tx_shift[5]      ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.034     ; 2.107      ;
+; 17.824 ; spi_master:spi_inst|clk_div_counter[3]     ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; -0.045     ; 2.093      ;
++--------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_50mhz'                                                                                                                                          ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; uart_controller:uart_inst|rx_baud_count[7] ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_baud_count[4] ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_baud_count[3] ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_baud_count[6] ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_state.0011    ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_bit_count[1]  ; uart_controller:uart_inst|rx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_bit_count[2]  ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_bit_count[3]  ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_baud_count[0] ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_baud_count[2] ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_ready         ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_bit_count[0]  ; uart_controller:uart_inst|tx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_bit_count[1]  ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_bit_count[2]  ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_state.0011    ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_state.0001    ; uart_controller:uart_inst|tx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_state.0000    ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[0]      ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[1]      ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[2]      ; uart_controller:uart_inst|rx_shift[2]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[3]      ; uart_controller:uart_inst|rx_shift[3]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[4]      ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[5]      ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[6]      ; uart_controller:uart_inst|rx_shift[6]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|rx_shift[7]      ; uart_controller:uart_inst|rx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|sclk~_Duplicate_1      ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|bit_count[0]           ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|bit_count[1]           ; spi_master:spi_inst|bit_count[1]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|bit_count[2]           ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|bit_count[3]           ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|state.TRANSMIT         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|mosi~_Duplicate_1      ; spi_master:spi_inst|mosi~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; spi_master:spi_inst|ss~_Duplicate_1        ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uart_controller:uart_inst|tx_shift[0]      ; uart_controller:uart_inst|tx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; spi_master:spi_inst|state.DONE             ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.389      ;
+; 0.239 ; uart_controller:uart_inst|rx_shift[5]      ; uart_controller:uart_inst|rx_data[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.247 ; uart_controller:uart_inst|rx_data[0]       ; uart_controller:uart_inst|tx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.399      ;
+; 0.257 ; uart_controller:uart_inst|rx_state.0010    ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.409      ;
+; 0.258 ; uart_controller:uart_inst|rx_state.0010    ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.410      ;
+; 0.260 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.412      ;
+; 0.262 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.414      ;
+; 0.264 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.416      ;
+; 0.272 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.424      ;
+; 0.273 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.425      ;
+; 0.274 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[0]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.426      ;
+; 0.274 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.426      ;
+; 0.275 ; uart_controller:uart_inst|tx_state.0010    ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.427      ;
+; 0.306 ; uart_controller:uart_inst|tx_state.0011    ; uart_controller:uart_inst|tx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.458      ;
+; 0.324 ; uart_controller:uart_inst|rx_shift[0]      ; uart_controller:uart_inst|rx_data[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.476      ;
+; 0.324 ; uart_controller:uart_inst|rx_shift[4]      ; uart_controller:uart_inst|rx_data[4]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.476      ;
+; 0.328 ; uart_controller:uart_inst|rx_data[7]       ; uart_controller:uart_inst|tx_shift[7]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.002      ; 0.482      ;
+; 0.330 ; uart_controller:uart_inst|rx_baud_count[1] ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.482      ;
+; 0.332 ; uart_controller:uart_inst|rx_shift[6]      ; uart_controller:uart_inst|rx_data[6]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 0.485      ;
+; 0.357 ; uart_controller:uart_inst|tx_baud_count[0] ; uart_controller:uart_inst|tx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; uart_controller:uart_inst|tx_baud_count[1] ; uart_controller:uart_inst|tx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.509      ;
+; 0.360 ; spi_master:spi_inst|clk_div_counter[5]     ; spi_master:spi_inst|clk_div_counter[5]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; uart_controller:uart_inst|tx_bit_count[0]  ; uart_controller:uart_inst|tx_bit_count[1]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; uart_controller:uart_inst|tx_bit_count[0]  ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; uart_controller:uart_inst|rx_state.0001    ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.515      ;
+; 0.365 ; spi_master:spi_inst|clk_div_counter[0]     ; spi_master:spi_inst|clk_div_counter[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; uart_controller:uart_inst|tx_baud_count[8] ; uart_controller:uart_inst|tx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; spi_master:spi_inst|clk_div_counter[3]     ; spi_master:spi_inst|clk_div_counter[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; uart_controller:uart_inst|tx_baud_count[2] ; uart_controller:uart_inst|tx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; uart_controller:uart_inst|tx_baud_count[7] ; uart_controller:uart_inst|tx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; uart_controller:uart_inst|tx_baud_count[4] ; uart_controller:uart_inst|tx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.520      ;
+; 0.370 ; uart_controller:uart_inst|tx_ready         ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.522      ;
+; 0.376 ; uart_controller:uart_inst|rx_state.0011    ; uart_controller:uart_inst|rx_valid         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; spi_master:spi_inst|clk_div_counter[1]     ; spi_master:spi_inst|clk_div_counter[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; spi_master:spi_inst|clk_div_counter[2]     ; spi_master:spi_inst|clk_div_counter[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; uart_controller:uart_inst|tx_baud_count[3] ; uart_controller:uart_inst|tx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; uart_controller:uart_inst|tx_baud_count[6] ; uart_controller:uart_inst|tx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; uart_controller:uart_inst|tx_baud_count[5] ; uart_controller:uart_inst|tx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; spi_master:spi_inst|clk_div_counter[4]     ; spi_master:spi_inst|clk_div_counter[4]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; spi_master:spi_inst|clk_div_counter[6]     ; spi_master:spi_inst|clk_div_counter[6]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; spi_master:spi_inst|clk_div_counter[8]     ; spi_master:spi_inst|clk_div_counter[8]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; spi_master:spi_inst|sclk~_Duplicate_1      ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.531      ;
+; 0.394 ; uart_controller:uart_inst|rx_bit_count[2]  ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.546      ;
+; 0.400 ; uart_controller:uart_inst|rx_state.0000    ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.552      ;
+; 0.402 ; spi_master:spi_inst|state.TRANSMIT         ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.554      ;
+; 0.408 ; uart_controller:uart_inst|rx_baud_count[8] ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.560      ;
+; 0.410 ; uart_controller:uart_inst|rx_baud_count[5] ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.562      ;
+; 0.417 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.569      ;
+; 0.423 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_bit_count[3]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.575      ;
+; 0.437 ; uart_controller:uart_inst|rx_state.0001    ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.589      ;
+; 0.437 ; uart_controller:uart_inst|rx_state.0010    ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.589      ;
+; 0.441 ; uart_controller:uart_inst|tx_state.0000    ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.593      ;
+; 0.450 ; uart_controller:uart_inst|rx_bit_count[1]  ; uart_controller:uart_inst|rx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.602      ;
+; 0.451 ; spi_master:spi_inst|clk_div_counter[7]     ; spi_master:spi_inst|clk_div_counter[7]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.603      ;
+; 0.451 ; uart_controller:uart_inst|rx_data[7]       ; spi_master:spi_inst|tx_buffer[7]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.011      ; 0.614      ;
+; 0.454 ; spi_master:spi_inst|bit_count[1]           ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.606      ;
+; 0.461 ; uart_controller:uart_inst|tx_bit_count[1]  ; uart_controller:uart_inst|tx_bit_count[2]  ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.000      ; 0.613      ;
+; 0.473 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_shift[1]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 0.626      ;
+; 0.479 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_shift[4]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 0.632      ;
+; 0.482 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_shift[0]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 0.635      ;
+; 0.482 ; uart_controller:uart_inst|rx_bit_count[0]  ; uart_controller:uart_inst|rx_shift[5]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.001      ; 0.635      ;
+; 0.488 ; spi_master:spi_inst|state.IDLE             ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.014      ; 0.654      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk_50mhz'                                                                                                      ;
++--------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 11.953 ; reset_n   ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|rx_data[0]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|rx_data[2]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|rx_data[3]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|rx_data[4]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|rx_data[5]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.953 ; reset_n   ; uart_controller:uart_inst|rx_data[6]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.408      ; 4.487      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_valid         ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.955 ; reset_n   ; uart_controller:uart_inst|rx_data[7]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.409      ; 4.486      ;
+; 11.956 ; reset_n   ; uart_controller:uart_inst|rx_data[1]       ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.411      ; 4.487      ;
+; 11.961 ; reset_n   ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.483      ;
+; 11.961 ; reset_n   ; uart_controller:uart_inst|tx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.483      ;
+; 11.961 ; reset_n   ; uart_controller:uart_inst|tx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.412      ; 4.483      ;
+; 12.016 ; reset_n   ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.377      ; 4.323      ;
+; 12.016 ; reset_n   ; spi_master:spi_inst|sclk                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.377      ; 4.323      ;
+; 12.022 ; reset_n   ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.376      ; 4.316      ;
+; 12.051 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.409      ;
+; 12.051 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.409      ;
+; 12.051 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.409      ;
+; 12.051 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.409      ;
+; 12.051 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.409      ;
+; 12.051 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.428      ; 4.409      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|state.TRANSMIT         ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|mosi~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.102 ; reset_n   ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.406      ; 4.336      ;
+; 12.104 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[1]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[2]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[3]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[4]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[5]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[6]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[7]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[8]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.104 ; reset_n   ; spi_master:spi_inst|clk_div_counter[0]     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.421      ; 4.349      ;
+; 12.124 ; reset_n   ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.328      ;
+; 12.124 ; reset_n   ; spi_master:spi_inst|bit_count[1]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.328      ;
+; 12.124 ; reset_n   ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.420      ; 4.328      ;
+; 12.124 ; reset_n   ; spi_master:spi_inst|ss                     ; clk_50mhz    ; clk_50mhz   ; 20.000       ; 1.376      ; 4.214      ;
++--------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk_50mhz'                                                                                                      ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.756 ; reset_n   ; spi_master:spi_inst|bit_count[0]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.420      ; 4.328      ;
+; 2.756 ; reset_n   ; spi_master:spi_inst|bit_count[1]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.420      ; 4.328      ;
+; 2.756 ; reset_n   ; spi_master:spi_inst|bit_count[2]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.420      ; 4.328      ;
+; 2.775 ; reset_n   ; spi_master:spi_inst|ss                     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.376      ; 4.214      ;
+; 2.776 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[3] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[6] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[4]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[5]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[6]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[7]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[8]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.776 ; reset_n   ; spi_master:spi_inst|clk_div_counter[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.421      ; 4.349      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|sclk~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|state.IDLE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|bit_count[3]           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|state.TRANSMIT         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|state.DONE             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|mosi~_Duplicate_1      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.778 ; reset_n   ; spi_master:spi_inst|ss~_Duplicate_1        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.406      ; 4.336      ;
+; 2.829 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[1] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.428      ; 4.409      ;
+; 2.829 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[7] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.428      ; 4.409      ;
+; 2.829 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[4] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.428      ; 4.409      ;
+; 2.829 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[2] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.428      ; 4.409      ;
+; 2.829 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[5] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.428      ; 4.409      ;
+; 2.829 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[8] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.428      ; 4.409      ;
+; 2.877 ; reset_n   ; spi_master:spi_inst|mosi                   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.376      ; 4.316      ;
+; 2.883 ; reset_n   ; uart_controller:uart_inst|tx_reg           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.377      ; 4.323      ;
+; 2.883 ; reset_n   ; spi_master:spi_inst|sclk                   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.377      ; 4.323      ;
+; 2.919 ; reset_n   ; uart_controller:uart_inst|tx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.412      ; 4.483      ;
+; 2.919 ; reset_n   ; uart_controller:uart_inst|tx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.412      ; 4.483      ;
+; 2.919 ; reset_n   ; uart_controller:uart_inst|tx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.412      ; 4.483      ;
+; 2.924 ; reset_n   ; uart_controller:uart_inst|rx_data[1]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.411      ; 4.487      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_state.0011    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_state.0010    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_state.0001    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_baud_count[0] ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_valid         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.925 ; reset_n   ; uart_controller:uart_inst|rx_data[7]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.409      ; 4.486      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|tx_ready         ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|tx_state.0000    ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|rx_data[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|rx_data[2]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|rx_data[3]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|rx_data[4]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|rx_data[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
+; 2.927 ; reset_n   ; uart_controller:uart_inst|rx_data[6]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 1.408      ; 4.487      ;
++-------+-----------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50mhz'                                                                                    ;
++-------+--------------+----------------+------------------+-----------+------------+--------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                                     ;
++-------+--------------+----------------+------------------+-----------+------------+--------------------------------------------+
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[0]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[0]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[1]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[1]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[2]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[2]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[3]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|bit_count[3]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[0]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[0]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[1]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[1]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[2]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[2]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[3]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[3]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[4]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[4]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[5]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[5]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[6]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[6]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[7]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[7]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[8]     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|clk_div_counter[8]     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi~_Duplicate_1      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|mosi~_Duplicate_1      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk~_Duplicate_1      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|sclk~_Duplicate_1      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss                     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss                     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss~_Duplicate_1        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|ss~_Duplicate_1        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.DONE             ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.DONE             ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.IDLE             ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.IDLE             ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.TRANSMIT         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|state.TRANSMIT         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[0]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[0]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[1]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[1]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[2]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[2]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[3]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[3]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[4]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[4]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[5]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[5]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[6]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[6]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[7]           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; spi_master:spi_inst|tx_buffer[7]           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[0] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[0] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[1] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[1] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[2] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[2] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[3] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[3] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[4] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[4] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[5] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[5] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[6] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[6] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[7] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[7] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[8] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_baud_count[8] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[2]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[2]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[3]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_bit_count[3]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[0]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[0]       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[1]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[1]       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[2]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[2]       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[3]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[3]       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[4]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[4]       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[5]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[5]       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[6]       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk_50mhz ; Rise       ; uart_controller:uart_inst|rx_data[6]       ;
++-------+--------------+----------------+------------------+-----------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset_n   ; clk_50mhz  ; 3.765 ; 3.765 ; Rise       ; clk_50mhz       ;
+; uart_rx   ; clk_50mhz  ; 3.151 ; 3.151 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50mhz  ; -2.819 ; -2.819 ; Rise       ; clk_50mhz       ;
+; uart_rx   ; clk_50mhz  ; -2.279 ; -2.279 ; Rise       ; clk_50mhz       ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; spi_mosi  ; clk_50mhz  ; 3.161 ; 3.161 ; Rise       ; clk_50mhz       ;
+; spi_sclk  ; clk_50mhz  ; 3.162 ; 3.162 ; Rise       ; clk_50mhz       ;
+; spi_ss    ; clk_50mhz  ; 3.161 ; 3.161 ; Rise       ; clk_50mhz       ;
+; uart_tx   ; clk_50mhz  ; 3.172 ; 3.172 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; spi_mosi  ; clk_50mhz  ; 3.161 ; 3.161 ; Rise       ; clk_50mhz       ;
+; spi_sclk  ; clk_50mhz  ; 3.162 ; 3.162 ; Rise       ; clk_50mhz       ;
+; spi_ss    ; clk_50mhz  ; 3.161 ; 3.161 ; Rise       ; clk_50mhz       ;
+; uart_tx   ; clk_50mhz  ; 3.172 ; 3.172 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 5.161 ; 0.215 ; 8.126    ; 2.756   ; 8.758               ;
+;  clk_50mhz       ; 5.161 ; 0.215 ; 8.126    ; 2.756   ; 8.758               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk_50mhz       ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset_n   ; clk_50mhz  ; 9.839 ; 9.839 ; Rise       ; clk_50mhz       ;
+; uart_rx   ; clk_50mhz  ; 7.531 ; 7.531 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50mhz  ; -2.819 ; -2.819 ; Rise       ; clk_50mhz       ;
+; uart_rx   ; clk_50mhz  ; -2.279 ; -2.279 ; Rise       ; clk_50mhz       ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; spi_mosi  ; clk_50mhz  ; 6.486 ; 6.486 ; Rise       ; clk_50mhz       ;
+; spi_sclk  ; clk_50mhz  ; 6.487 ; 6.487 ; Rise       ; clk_50mhz       ;
+; spi_ss    ; clk_50mhz  ; 6.486 ; 6.486 ; Rise       ; clk_50mhz       ;
+; uart_tx   ; clk_50mhz  ; 6.497 ; 6.497 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; spi_mosi  ; clk_50mhz  ; 3.161 ; 3.161 ; Rise       ; clk_50mhz       ;
+; spi_sclk  ; clk_50mhz  ; 3.162 ; 3.162 ; Rise       ; clk_50mhz       ;
+; spi_ss    ; clk_50mhz  ; 3.161 ; 3.161 ; Rise       ; clk_50mhz       ;
+; uart_tx   ; clk_50mhz  ; 3.172 ; 3.172 ; Rise       ; clk_50mhz       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_50mhz  ; clk_50mhz ; 1593     ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_50mhz  ; clk_50mhz ; 1593     ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Recovery Transfers                                                 ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_50mhz  ; clk_50mhz ; 50       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Removal Transfers                                                  ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_50mhz  ; clk_50mhz ; 50       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Sep 26 15:26:01 2025
+Info: Command: quartus_sta spi_fpga -c fpga_spi_top
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'timing.sdc'
+Warning (332174): Ignored filter at timing.sdc(7): spi_miso could not be matched with a port
+Warning (332049): Ignored set_input_delay at timing.sdc(7): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -clock clk_50mhz -max 5.0 [get_ports spi_miso]
+Warning (332049): Ignored set_input_delay at timing.sdc(8): Argument <targets> is an empty collection
+    Info (332050): set_input_delay -clock clk_50mhz -min 0.0 [get_ports spi_miso]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 5.161
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     5.161         0.000 clk_50mhz 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 clk_50mhz 
+Info (332146): Worst-case recovery slack is 8.126
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.126         0.000 clk_50mhz 
+Info (332146): Worst-case removal slack is 5.905
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     5.905         0.000 clk_50mhz 
+Info (332146): Worst-case minimum pulse width slack is 8.758
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.758         0.000 clk_50mhz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 11.235
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    11.235         0.000 clk_50mhz 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk_50mhz 
+Info (332146): Worst-case recovery slack is 11.953
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    11.953         0.000 clk_50mhz 
+Info (332146): Worst-case removal slack is 2.756
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     2.756         0.000 clk_50mhz 
+Info (332146): Worst-case minimum pulse width slack is 9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     9.000         0.000 clk_50mhz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4541 megabytes
+    Info: Processing ended: Fri Sep 26 15:26:02 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

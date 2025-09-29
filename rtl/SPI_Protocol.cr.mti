@@ -1,0 +1,50 @@
+D:/sem7/SPI_protocol/rtl/spi_testbench.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/spi_testbench.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_testbench
+
+Top level modules:
+	spi_testbench
+
+} {} {}} D:/sem7/SPI_protocol/rtl/spi_fpga_top.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/spi_fpga_top.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_fpga_top
+
+Top level modules:
+	spi_fpga_top
+
+} {} {}} D:/sem7/SPI_protocol/rtl/spi_master.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/spi_master.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_master
+
+Top level modules:
+	spi_master
+
+} {} {}} D:/sem7/SPI_protocol/rtl/spi_slave_test.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/spi_slave_test.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_slave_test
+
+Top level modules:
+	spi_slave_test
+
+} {} {}} D:/sem7/SPI_protocol/rtl/uart_debug.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/uart_debug.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module uart_debug
+
+Top level modules:
+	uart_debug
+
+} {} {}} D:/sem7/SPI_protocol/rtl/spi_slave.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/spi_slave.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_slave
+
+Top level modules:
+	spi_slave
+
+} {} {}} D:/sem7/SPI_protocol/rtl/spi_master_test.v {1 {vlog -work work D:/sem7/SPI_protocol/rtl/spi_master_test.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_master_test
+
+Top level modules:
+	spi_master_test
+
+} {} {}}

@@ -1,0 +1,77 @@
+`timescale 1ns/1ps
+
+module spi_master_test;
+    // Signals
+    reg clk, rst_n, start;
+    reg [7:0] tx_data;
+    reg spi_miso;
+    wire [7:0] rx_data;
+    wire tx_valid, spi_clk, spi_mosi, spi_cs_n;
+    
+    // Clock
+    always #10 clk = ~clk;
+    
+    // DUT
+    spi_master dut (
+        .clk(clk), .rst_n(rst_n), .start(start), .tx_data(tx_data),
+        .rx_data(rx_data), .tx_valid(tx_valid), .spi_clk(spi_clk),
+        .spi_mosi(spi_mosi), .spi_miso(spi_miso), .spi_cs_n(spi_cs_n)
+    );
+    
+    // Slave simulation process
+    reg [7:0] slave_response;
+    reg [3:0] bit_count;
+    
+    // Simulate slave behavior with always blocks instead of fork/join
+    always @(negedge spi_cs_n) begin
+        if (!spi_cs_n) begin
+            slave_response = 8'h5A; // Fixed response pattern
+            bit_count = 0;
+        end
+    end
+    
+    always @(negedge spi_clk) begin
+        if (!spi_cs_n) begin
+            spi_miso = slave_response[7-bit_count];
+            bit_count = bit_count + 1;
+        end
+    end
+    
+    initial begin
+        // Initialize
+        clk = 0; rst_n = 0; start = 0; tx_data = 0; spi_miso = 0;
+        
+        // Setup simulation (comment out if not supported)
+        // $dumpfile("spi_master_test.vcd");
+        // $dumpvars(0, spi_master_test);
+        
+        $display("Starting SPI Master Individual Test");
+        
+        // Reset
+        #100 rst_n = 1;
+        #100;
+        
+        // Test transmission
+        tx_data = 8'hA5;
+        $display("Testing with TX data: 0x%02h", tx_data);
+        
+        start = 1;
+        #20 start = 0;
+        
+        // Wait for completion
+        wait(tx_valid);
+        #100;
+        
+        $display("Master Test Complete");
+        $display("TX Data: 0x%02h", tx_data);
+        $display("RX Data: 0x%02h", rx_data);
+        
+        if (rx_data == 8'h5A) begin
+            $display("Result: PASS");
+        end else begin
+            $display("Result: FAIL - Expected 0x5A");
+        end
+        
+        $finish;
+    end
+endmodule

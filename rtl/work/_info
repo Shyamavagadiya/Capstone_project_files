@@ -1,0 +1,138 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\sem7\SPI_protocol\rtl
+vspi_fpga_top
+Z1 !s100 G<=mkzkmeTb67m9gc@4o[2
+Z2 I3Q1G]>E_e>UcmM2BzE`Vz3
+Z3 VR3j1eMGU>Q:?0]Pg_kjKH1
+Z4 dD:\sem7\SPI_protocol\rtl
+Z5 w1758463055
+Z6 8D:/sem7/SPI_protocol/rtl/spi_fpga_top.v
+Z7 FD:/sem7/SPI_protocol/rtl/spi_fpga_top.v
+L0 4
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/spi_fpga_top.v|
+Z10 o-work work -O0
+Z11 !s108 1758782139.498000
+Z12 !s107 D:/sem7/SPI_protocol/rtl/spi_fpga_top.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vspi_master
+Z13 IA]h<Ne[;7VncL]zcGPOEa2
+Z14 VR9>iQ0HFllWkEbK;b2zKQ2
+R4
+Z15 w1758462738
+Z16 8D:/sem7/SPI_protocol/rtl/spi_master.v
+Z17 FD:/sem7/SPI_protocol/rtl/spi_master.v
+L0 4
+R8
+r1
+31
+R10
+Z18 !s100 YcBgJl;JL8@nWLhziaH[32
+Z19 !s108 1758782139.324000
+Z20 !s107 D:/sem7/SPI_protocol/rtl/spi_master.v|
+Z21 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/spi_master.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vspi_master_test
+Z22 I?bIh==he_hf`VW<_C>WRa2
+Z23 VldYT[Rk5FiCH0K@XX7f5F3
+R4
+Z24 w1758782128
+Z25 8D:/sem7/SPI_protocol/rtl/spi_master_test.v
+Z26 FD:/sem7/SPI_protocol/rtl/spi_master_test.v
+L0 3
+R8
+r1
+31
+Z27 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/spi_master_test.v|
+R10
+!i10b 1
+Z28 !s100 3354NcGKJ@^6A:RSXFo?j2
+!s85 0
+Z29 !s108 1758782139.719000
+Z30 !s107 D:/sem7/SPI_protocol/rtl/spi_master_test.v|
+!s101 -O0
+vspi_slave
+Z31 !s100 RHfP<m[CCa6N6Vc[g`G4J2
+Z32 I:T]DMRWm9bD6[36FHjoh10
+Z33 V_F@?O0IgYARO5H9aPIj@h2
+R4
+Z34 w1758462992
+Z35 8D:/sem7/SPI_protocol/rtl/spi_slave.v
+Z36 FD:/sem7/SPI_protocol/rtl/spi_slave.v
+L0 4
+R8
+r1
+31
+Z37 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/spi_slave.v|
+R10
+Z38 !s108 1758782139.415000
+Z39 !s107 D:/sem7/SPI_protocol/rtl/spi_slave.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vspi_slave_test
+!i10b 1
+!s100 h28[jcczRT@c35KW4`z6a1
+ILPU0=e;XKVk=F80JIaV2J1
+Z40 V=[kInXcRJFQ4AYF;h1GEY3
+R4
+w1758782135
+Z41 8D:/sem7/SPI_protocol/rtl/spi_slave_test.v
+Z42 FD:/sem7/SPI_protocol/rtl/spi_slave_test.v
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1758782139.780000
+!s107 D:/sem7/SPI_protocol/rtl/spi_slave_test.v|
+Z43 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/spi_slave_test.v|
+!s101 -O0
+R10
+vspi_testbench
+Z44 !s100 TJaUgf2kO5M?=0VCONkIj0
+Z45 Ii;11nil`U?U6YgR:nSU2Z1
+Z46 V_J;l8j;l@@hAOB;Q1Gg_n0
+R4
+Z47 w1758463801
+Z48 8D:/sem7/SPI_protocol/rtl/spi_testbench.v
+Z49 FD:/sem7/SPI_protocol/rtl/spi_testbench.v
+L0 8
+R8
+r1
+31
+Z50 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/spi_testbench.v|
+R10
+Z51 !s108 1758782139.637000
+Z52 !s107 D:/sem7/SPI_protocol/rtl/spi_testbench.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vuart_debug
+Z53 !s100 IaFC9M3Zg>]0kWE80kGMn0
+Z54 IkJ3bE0NnzGSgJAnSf]Z7i2
+Z55 V<L:DLaEg;Xn=W96IYiNB[0
+R4
+Z56 w1758463115
+Z57 8D:/sem7/SPI_protocol/rtl/uart_debug.v
+Z58 FD:/sem7/SPI_protocol/rtl/uart_debug.v
+L0 4
+R8
+r1
+31
+Z59 !s90 -reportprogress|300|-work|work|D:/sem7/SPI_protocol/rtl/uart_debug.v|
+R10
+Z60 !s108 1758782139.567000
+Z61 !s107 D:/sem7/SPI_protocol/rtl/uart_debug.v|
+!i10b 1
+!s85 0
+!s101 -O0

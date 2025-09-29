@@ -1,0 +1,38 @@
+
+# ModelSim Simulation Script
+
+# Load the testbench
+vsim -t ps work.spi_testbench
+
+# Add signals to waveform
+add wave -divider "System Signals"
+add wave /spi_testbench/clk
+add wave /spi_testbench/rst_n
+
+add wave -divider "SPI Master Signals"
+add wave /spi_testbench/start
+add wave /spi_testbench/tx_data
+add wave /spi_testbench/master_rx_data
+add wave /spi_testbench/master_tx_valid
+
+add wave -divider "SPI Bus Signals"
+add wave /spi_testbench/spi_clk
+add wave /spi_testbench/spi_mosi
+add wave /spi_testbench/spi_miso
+add wave /spi_testbench/spi_cs_n
+
+add wave -divider "SPI Slave Signals"
+add wave /spi_testbench/slave_tx_data
+add wave /spi_testbench/slave_rx_data
+add wave /spi_testbench/slave_data_valid
+
+# Configure wave format
+configure wave -namecolwidth 200
+configure wave -valuecolwidth 100
+configure wave -timelineunits ns
+
+# Run simulation
+run -all
+
+# Zoom to fit
+wave zoom full
